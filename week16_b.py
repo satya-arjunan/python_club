@@ -18,6 +18,7 @@ def get_column_number(columns):
     column_no = int(input("Enter the column number you like to analyse:\n"))
     return column_no
 
+# This is the function to plot the selected column
 def plot_selected_column(df, column):
     fig, ax = plt.subplots(1, 2)
     fig.suptitle(f"{column}", fontsize=20)
@@ -31,7 +32,6 @@ def plot_selected_column(df, column):
     plt.tight_layout()
     plt.show()
 
-filename = "healthcare_dataset.csv" # str variable to set the csv file name
 df = pd.read_csv(filename) # read and convert the csv file into a dataframe
 
 categorical_cols = select_categorical_columns(df)
